@@ -4,15 +4,15 @@ var icon = document.getElementById("icon");
 icon.onclick = function () {
   if (mymusic.paused) {
     mymusic.play();
-    icon.src = "assets/image/pause.png";
+    icon.src = "/assets/image/pause.png";
   } else {
     mymusic.pause();
-    icon.src = "assets/image/play.png";
+    icon.src = "/assets/image/play.png";
   }
 };
 
 var mymusic = new Audio(
-  "assets/music/Sampaikan sayangku untuk dia (karaoke).mp3"
+  "/assets/music/Sampaikan sayangku untuk dia (karaoke).mp3"
 );
 mymusic.volume = 1;
 mymusic.play();
@@ -27,8 +27,8 @@ if (mymusic) {
       event.preventDefault();
 
       mymusic.paused
-        ? mymusic.play((icon.src = "assets/image/pause.png"))
-        : mymusic.pause((icon.src = "assets/image/play.png"));
+        ? mymusic.play((icon.src = "/assets/image/pause.png"))
+        : mymusic.pause((icon.src = "/assets/image/play.png"));
     }
   });
 }
